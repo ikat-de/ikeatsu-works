@@ -3,7 +3,7 @@
 </div>
 
 <div class="top-image-container">
-  <%= image_tag "profile.jpg", class: 'profile-image open-fadein' %>
+  <%= image_tag "profile.jpg", class: 'profile-image' %>
   <%= image_tag "ikeatsu-works-favicon-gray.png", class: 'favicon' %>
   <div class="title">
     <span>I</span>
@@ -15,7 +15,7 @@
     <span>S</span>
     <span>U</span>
   </div>
-  <div class="title open-fadein">
+  <div class="title">
     <span>W</span>
     <span>O</span>
     <span>R</span>
@@ -30,7 +30,7 @@
 <div class="services-container">
   <%= image_tag "brown-stripe.png", class: 'brown-stripe' %>
   
-  <div class="circle fadein">
+  <div class="circle fadein" id="fi-1">
     <h2>SERVICE</h2>  
     <p>デザイン × エンジニアリング の力で
     <br>「0 を 1 に」「1 を 10 に」「10 を 100 以上に」</p>      
@@ -40,40 +40,40 @@
     <br>ワンストップで提供します。</p>      
   </div>
   
-  <div class="service-1">
-    <%= image_tag "ikeatsu-works-icons-service-01.png", class: 'icons-service fadein' %>
-    <h2 class="fadein">新規サービスのデザイン&開発支援</h2>
-    <p class="fadein">ゼロベースからのアイデア発想・コンセプトメイク・要件定義
+  <div class="service-1 fadein"  id="fi-2">
+    <%= image_tag "ikeatsu-works-icons-service-01.png", class: 'icons-service' %>
+    <h2>新規サービスのデザイン&開発支援</h2>
+    <p>ゼロベースからのアイデア発想・コンセプトメイク・要件定義
     <br>デザインへの落とし込み、動くモノの試作・開発まで
     <br>クリエイションを一貫してサポートします。</p>  
-    <h3 class="fadein">2 MONTHS 〜</h3>    
+    <h3>2 MONTHS 〜</h3>    
   </div>
 
-  <div class="service-2">
-    <%= image_tag "ikeatsu-works-icons-service-02.png", class: 'icons-service fadein' %>
-    <h2 class="fadein">既存サービスの改善</h2>  
-    <p class="fadein">ユーザー体験向上のボトルネックとなっている課題を
+  <div class="service-2 fadein" id="fi-3">
+    <%= image_tag "ikeatsu-works-icons-service-02.png", class: 'icons-service' %>
+    <h2>既存サービスの改善</h2>  
+    <p>ユーザー体験向上のボトルネックとなっている課題を
     <br>UI/UXデザインおよびブランディングの視点で分析し
     <br>体系的に再構築した改善案を提案いたします。</p>  
-    <h3 class="fadein">1 MONTHS 〜</h3>
+    <h3>1 MONTHS 〜</h3>
   </div>
   
-  <div class="service-3">
-    <%= image_tag "ikeatsu-works-icons-service-03.png", class: 'icons-service fadein' %>
-    <h2 class="fadein">デザインコンサルティング&製作</h2>  
-    <p class="fadein">webサイト製作・インフォグラフィックスのデザインなど
+  <div class="service-3 fadein" id="fi-4">
+    <%= image_tag "ikeatsu-works-icons-service-03.png", class: 'icons-service' %>
+    <h2>デザインコンサルティング&製作</h2>  
+    <p>webサイト製作・インフォグラフィックスのデザインなど
     <br>アートディレクションからデザイン制作まで
     <br>幅広いデザイン課題に対応いたします。</p>  
-    <h3 class="fadein">1 WEEK 〜</h3>
+    <h3>1 WEEK 〜</h3>
   </div>
 </div>
 
-<div class="works-header fadein">
+<div class="works-header fadein" id="fi-5">
   <h2>WORKS</h2>
 </div>
 
-<div class="horizontal-scroll">
-  <div class="work-container fadein">
+<div class="horizontal-scroll fadein" id="fi-6">
+  <div class="work-container">
     <%= image_tag "eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
     <p>Web Application</p>
@@ -81,7 +81,7 @@
       <span>UIUX Design / Web App Development</span>
     </div>    
   </div>
-  <div class="work-container fadein">
+  <div class="work-container">
     <%= image_tag "eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
     <p>Web Application</p>
@@ -89,7 +89,7 @@
       <span>UIUX Design / Web App Development</span>
     </div>    
   </div>
-  <div class="work-container fadein">
+  <div class="work-container">
     <%= image_tag "eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
     <p>Web Application</p>
@@ -102,7 +102,7 @@
 <div class="services-container">
   <%= image_tag "brown-stripe.png", class: 'brown-stripe' %>
   
-  <div class="circle fadein">
+  <div class="circle fadein" id="fi-7">
     <h2>SKILL SET</h2>  
     <p>様々なツールを駆使した
     <br>デザインと</p>      
@@ -111,50 +111,50 @@
     <p>アイデアをカタチにします。</p>      
   </div>
   
-  <div class="skill-1">
-    <div class="skill-icon-container fadein">
+  <div class="skill-1 fadein" id="fi-8">
+    <div class="skill-icon-container">
       <%= image_tag "ikeatsu-works-icons-photoshop.png", class: 'skill-icon' %>
       <%= image_tag "ikeatsu-works-icons-illustrator.png", class: 'skill-icon' %>
       <%= image_tag "ikeatsu-works-icons-figma.png", class: 'skill-icon' %>
     </div>
-    <h2 class="fadein">Graphic Design</h2>
-    <h3 class="fadein">Photoshop / Illustrator / Figma</h3>
+    <h2>Graphic Design</h2>
+    <h3>Photoshop / Illustrator / Figma</h3>
   </div>
   
-  <div class="skill-2">
-    <div class="skill-icon-container-2 fadein">
+  <div class="skill-2 fadein" id="fi-9">
+    <div class="skill-icon-container-2">
       <%= image_tag "ikeatsu-works-icons-cinema4d.png", class: 'skill-icon' %>
       <%= image_tag "ikeatsu-works-icons-keyshot.png", class: 'skill-icon' %>
     </div>
-    <h2 class="fadein">3D Modeling</h2>
-    <h3 class="fadein">Cinema 4D / Key shot</h3>
+    <h2>3D Modeling</h2>
+    <h3>Cinema 4D / Key shot</h3>
   </div>
   
-  <div class="skill-3">
-    <div class="skill-icon-container fadein">
+  <div class="skill-3 fadein" id="fi-10">
+    <div class="skill-icon-container">
       <%= image_tag "ikeatsu-works-icons-premiere-pro.png", class: 'skill-icon' %>
     </div>
-    <h2 class="fadein">Movie Edit</h2>
-    <h3 class="fadein">Premiere Pro</h3>
+    <h2>Movie Edit</h2>
+    <h3>Premiere Pro</h3>
   </div>
   
-  <div class="skill-4">
-    <div class="skill-icon-container-2 fadein">
+  <div class="skill-4 fadein" id="fi-11">
+    <div class="skill-icon-container-2">
       <%= image_tag "ikeatsu-works-icons-ruby-on-rails.png", class: 'skill-icon' %>
       <%= image_tag "ikeatsu-works-icons-java-script.png", class: 'skill-icon' %>
     </div>
-    <div class="skill-icon-container-2 fadein">
+    <div class="skill-icon-container-2">
       <%= image_tag "ikeatsu-works-icons-html.png", class: 'skill-icon' %>
       <%= image_tag "ikeatsu-works-icons-css.png", class: 'skill-icon' %>
     </div>
-    <h2 class="fadein">Programing</h2>
-    <h3 class="fadein">Ruby on Rails / Javascript / HTML / CSS</h3>
+    <h2>Programing</h2>
+    <h3>Ruby on Rails / Javascript / HTML / CSS</h3>
   </div>
 </div>
 
 <div class="contact-container">
-  <h2 class="fadein">CONTACT</h2>
-  <div class="contact-form-container fadein">
+  <h2 class="fadein" id="fi-12">CONTACT</h2>
+  <div class="contact-form-container fadein" id="fi-13">
     <%= image_tag "ikeatsu-works-icons-mail.png", class: 'mail-icon' %>
     <h3>プロジェクトのご相談、その他お問い合わせなど
     <br>どうぞお気軽にご連絡ください</h3>
@@ -177,9 +177,9 @@
 </div>
 
 <div class="sns-container">
-  <h2 class="fadein">SNS</h2>
-  <h3 class="fadein">各種SNSで情報発信しています！</h3>
-  <div class="sns-icon-container fadein">
+  <h2 class="fadein" id="fi-13">SNS</h2>
+  <h3 class="fadein" id="fi-14">各種SNSで情報発信しています！</h3>
+  <div class="sns-icon-container fadein" id="fi-15">
     <%= image_tag "ikeatsu-works-icons-twitter.png", class: 'sns-icon' %>
     <%= image_tag "ikeatsu-works-icons-note.png", class: 'sns-icon' %>
     <%= image_tag "ikeatsu-works-icons-github.png", class: 'sns-icon' %>
@@ -199,7 +199,7 @@
   });  
   
   $(window).scroll(function (){
-    $('.fadein').each(function(){
+    $('[id^=fi-]').each(function(){
       var elemPos = $(this).offset().top,
         scroll = $(window).scrollTop(),
         windowHeight = $(window).height();
