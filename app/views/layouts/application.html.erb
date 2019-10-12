@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>IkeatsuWorks</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Roboto&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <footer>
+      <div>
+        <%= image_tag "ikeatsu-works-favicon.png", class: 'footer-icon' %>
+        <p>IKE-ATSU WORKS</p>
+        <p><%= link_to "SERVICE", "/home"%></p>
+        <p><%= link_to "WORKS", "/home"%></p>
+        <p><%= link_to "SKILLS", "/home"%></p>
+        <p><%= link_to "CONTACT", "/home"%></p>
+        <p>©️2019 IKE-ATSU WORKS All right reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
