@@ -1,29 +1,18 @@
 body {
-  background: #637373;
+  // background: #637373;
   font-family: 'M PLUS 1p', sans-serif;  
   h2 {
     font-size: 3em;
   }
- 
-  // .fadein {
-  //   opacity: 0;
-  //   transform : translate(0, 50px);
-  //   transition : all 1500ms;
-  // }
-  
-  // .fadein.scrollin {
-  //   opacity: 1;
-  //   transform: translate(0, 0);
-  // } 
 }
 
-.back-image {
-  position: fixed;
-  width: 100vw;
-  overflow: hidden;
-  object-fit: cover;
-  z-index: -2;  
-}
+// .back-image {
+//   position: fixed;
+//   width: 100vw;
+//   overflow: hidden;
+//   object-fit: cover;
+//   z-index: -2;  
+// }
 
 .top-image-container {
   width: 100vw;

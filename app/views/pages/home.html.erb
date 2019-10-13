@@ -1,6 +1,6 @@
-<div class="back-image-container" id="bi">
-  <%= image_tag "design-engineering.jpg", class: 'back-image'%>
-</div>
+<!--<div class="back-image-container" id="bi">-->
+<!--  <%#= image_tag "design-engineering.jpg", class: 'back-image'%>-->
+<!--</div>-->
 
 <div class="top-image-container">
   <%= image_tag "profile.jpg", class: 'profile-image' %>
@@ -189,24 +189,24 @@
 </div>
 
 <script>
-  $(function() {
-      var bi = $('#bi');    
-      $(window).scroll(function () {
-          if ($(this).scrollTop() > 4000) {
-            bi.hide();
-          } else {
-            bi.show();
-          }
-      });
-  });  
-  
+  // $(function() {
+  //     var bi = $('#bi');    
+  //     $(window).scroll(function () {
+  //         if ($(this).scrollTop() > 4000) {
+  //           bi.hide();
+  //         } else {
+  //           bi.show();
+  //         }
+  //     });
+  // });  
+  // $('[id^=fi-]').hide();
   // $(window).scroll(function (){
   //   $('[id^=fi-]').each(function(){
   //     var elemPos = $(this).offset().top,
   //       scroll = $(window).scrollTop(),
   //       windowHeight = $(window).height();
   //     if (scroll > elemPos - windowHeight + 200){
-  //       $(this).addClass('scrollin');
+  //       $(this).fadeIn(1500);
   //     }
   //   });
   // });  
