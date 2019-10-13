@@ -28,7 +28,7 @@
 <div class="services-container" id="1">
   <%= image_tag @s3+"brown-stripe.png", class: 'brown-stripe' %>
   
-  <div class="circle">
+  <div class="circle fadein" id="fi-1">
     <h2>SERVICE</h2>  
     <p>デザイン × エンジニアリング の力で
     <br>「0 を 1 に」「1 を 10 に」「10 を 100 以上に」</p>      
@@ -38,7 +38,7 @@
     <br>ワンストップで提供します。</p>      
   </div>
   
-  <div class="service-1">
+  <div class="service-1 fadein" id="fi-2">
     <%= image_tag @s3+"ikeatsu-works-icons-service-01.png", class: 'icons-service' %>
     <h2>新規サービスのデザイン&開発支援</h2>
     <p>ゼロベースからのアイデア発想・コンセプトメイク・要件定義
@@ -47,7 +47,7 @@
     <h3>2 MONTHS 〜</h3>    
   </div>
 
-  <div class="service-2">
+  <div class="service-2 fadein" id="fi-3">
     <%= image_tag @s3+"ikeatsu-works-icons-service-02.png", class: 'icons-service' %>
     <h2>既存サービスの改善</h2>  
     <p>ユーザー体験向上のボトルネックとなっている課題を
@@ -56,7 +56,7 @@
     <h3>1 MONTHS 〜</h3>
   </div>
   
-  <div class="service-3">
+  <div class="service-3 fadein" id="fi-4">
     <%= image_tag @s3+"ikeatsu-works-icons-service-03.png", class: 'icons-service' %>
     <h2>デザインコンサルティング&製作</h2>  
     <p>webサイト製作・インフォグラフィックスのデザインなど
@@ -70,7 +70,7 @@
   <h2>WORKS</h2>
 </div>
 
-<div class="horizontal-scroll">
+<div class="horizontal-scroll fadein" id="fi-5">
   <div class="work-container">
     <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
@@ -100,7 +100,7 @@
 <div class="services-container" id="3">
   <%= image_tag @s3+"brown-stripe.png", class: 'brown-stripe' %>
   
-  <div class="circle">
+  <div class="circle fadein" id="fi-6">
     <h2>SKILL SET</h2>  
     <p>様々なツールを駆使した
     <br>デザインと</p>      
@@ -109,7 +109,7 @@
     <p>アイデアをカタチにします。</p>      
   </div>
   
-  <div class="skill-1">
+  <div class="skill-1 fadein" id="fi-7">
     <div class="skill-icon-container">
       <%= image_tag @s3+"ikeatsu-works-icons-photoshop.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-illustrator.png", class: 'skill-icon' %>
@@ -119,7 +119,7 @@
     <h3>Photoshop / Illustrator / Figma</h3>
   </div>
   
-  <div class="skill-2">
+  <div class="skill-2 fadein" id="fi-8">
     <div class="skill-icon-container-2">
       <%= image_tag @s3+"ikeatsu-works-icons-cinema4d.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-keyshot.png", class: 'skill-icon' %>
@@ -128,7 +128,7 @@
     <h3>Cinema 4D / Key shot</h3>
   </div>
   
-  <div class="skill-3">
+  <div class="skill-3 fadein" id="fi-9">
     <div class="skill-icon-container">
       <%= image_tag @s3+"ikeatsu-works-icons-premiere-pro.png", class: 'skill-icon' %>
     </div>
@@ -136,7 +136,7 @@
     <h3>Premiere Pro</h3>
   </div>
   
-  <div class="skill-4">
+  <div class="skill-4 fadein" id="fi-10">
     <div class="skill-icon-container-2">
       <%= image_tag @s3+"ikeatsu-works-icons-ruby-on-rails.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-java-script.png", class: 'skill-icon' %>
@@ -152,7 +152,7 @@
 
 <div class="contact-container" id="4">
   <h2>CONTACT</h2>
-  <div class="contact-form-container">
+  <div class="contact-form-container fadein" id="fi-11">
     <div>
       <%= image_tag @s3+"ikeatsu-works-icons-mail.png", class: 'mail-icon' %>
     </div>
@@ -179,7 +179,7 @@
 <div class="sns-container">
   <h2>SNS</h2>
   <h3>各種SNSで情報発信しています！</h3>
-  <div class="sns-icon-container">
+  <div class="sns-icon-container fadein" id="fi-12">
     <%= image_tag @s3+"ikeatsu-works-icons-twitter.png", class: 'sns-icon' %>
     <%= image_tag @s3+"ikeatsu-works-icons-note.png", class: 'sns-icon' %>
     <%= image_tag @s3+"ikeatsu-works-icons-github.png", class: 'sns-icon' %>
@@ -187,9 +187,20 @@
 </div>
 
 <script>
+$(window).scroll(function (){
+  $('[id^=fi-]').each(function(){
+    var elemPos = $(this).offset().top,
+      scroll = $(window).scrollTop(),
+      windowHeight = $(window).height();
+    if (scroll > elemPos - windowHeight + 200){
+      $(this).addClass('scrollin');
+    }
+  });
+});  
+
 $(function(){
   $('a[href^="#"]').click(function(){
-    var speed = 3000;
+    var speed = 1000;
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top;
