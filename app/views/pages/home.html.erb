@@ -1,6 +1,7 @@
 <div class="top-image-container">
-  <%= image_tag "profile.jpg", class: 'profile-image' %>
-  <%= image_tag "ikeatsu-works-favicon-gray.png", class: 'favicon' %>
+  
+  <%= image_tag @s3+"profile.jpg", class: 'profile-image' %>
+  <%= image_tag @s3+"ikeatsu-works-favicon-gray.png", class: 'favicon' %>
   <div class="title">
     <span>I</span>
     <span>K</span>
@@ -21,11 +22,11 @@
 </div>
 
 <div class="window-container">
-  <%= image_tag "design-engineering.jpg", class: 'back-image'%>
+  <%= image_tag @s3+"design-engineering.jpg", class: 'back-image'%>
 </div>
 
 <div class="services-container" id="1">
-  <%= image_tag "brown-stripe.png", class: 'brown-stripe' %>
+  <%= image_tag @s3+"brown-stripe.png", class: 'brown-stripe' %>
   
   <div class="circle">
     <h2>SERVICE</h2>  
@@ -38,7 +39,7 @@
   </div>
   
   <div class="service-1">
-    <%= image_tag "ikeatsu-works-icons-service-01.png", class: 'icons-service' %>
+    <%= image_tag @s3+"ikeatsu-works-icons-service-01.png", class: 'icons-service' %>
     <h2>新規サービスのデザイン&開発支援</h2>
     <p>ゼロベースからのアイデア発想・コンセプトメイク・要件定義
     <br>デザインへの落とし込み、動くモノの試作・開発まで
@@ -47,7 +48,7 @@
   </div>
 
   <div class="service-2">
-    <%= image_tag "ikeatsu-works-icons-service-02.png", class: 'icons-service' %>
+    <%= image_tag @s3+"ikeatsu-works-icons-service-02.png", class: 'icons-service' %>
     <h2>既存サービスの改善</h2>  
     <p>ユーザー体験向上のボトルネックとなっている課題を
     <br>UI/UXデザインおよびブランディングの視点で分析し
@@ -56,7 +57,7 @@
   </div>
   
   <div class="service-3">
-    <%= image_tag "ikeatsu-works-icons-service-03.png", class: 'icons-service' %>
+    <%= image_tag @s3+"ikeatsu-works-icons-service-03.png", class: 'icons-service' %>
     <h2>デザインコンサルティング&製作</h2>  
     <p>webサイト製作・インフォグラフィックスのデザインなど
     <br>アートディレクションからデザイン制作まで
@@ -71,7 +72,7 @@
 
 <div class="horizontal-scroll">
   <div class="work-container">
-    <%= image_tag "eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
+    <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
     <p>Web Application</p>
     <div class="work-link-button">
@@ -79,7 +80,7 @@
     </div>    
   </div>
   <div class="work-container">
-    <%= image_tag "eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
+    <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
     <p>Web Application</p>
     <div class="work-link-button">
@@ -87,7 +88,7 @@
     </div>    
   </div>
   <div class="work-container">
-    <%= image_tag "eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
+    <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
     <p>Web Application</p>
     <div class="work-link-button">
@@ -97,7 +98,7 @@
 </div>
 
 <div class="services-container" id="3">
-  <%= image_tag "brown-stripe.png", class: 'brown-stripe' %>
+  <%= image_tag @s3+"brown-stripe.png", class: 'brown-stripe' %>
   
   <div class="circle">
     <h2>SKILL SET</h2>  
@@ -110,9 +111,9 @@
   
   <div class="skill-1">
     <div class="skill-icon-container">
-      <%= image_tag "ikeatsu-works-icons-photoshop.png", class: 'skill-icon' %>
-      <%= image_tag "ikeatsu-works-icons-illustrator.png", class: 'skill-icon' %>
-      <%= image_tag "ikeatsu-works-icons-figma.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-photoshop.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-illustrator.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-figma.png", class: 'skill-icon' %>
     </div>
     <h2>Graphic Design</h2>
     <h3>Photoshop / Illustrator / Figma</h3>
@@ -120,8 +121,8 @@
   
   <div class="skill-2">
     <div class="skill-icon-container-2">
-      <%= image_tag "ikeatsu-works-icons-cinema4d.png", class: 'skill-icon' %>
-      <%= image_tag "ikeatsu-works-icons-keyshot.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-cinema4d.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-keyshot.png", class: 'skill-icon' %>
     </div>
     <h2>3D Modeling</h2>
     <h3>Cinema 4D / Key shot</h3>
@@ -129,7 +130,7 @@
   
   <div class="skill-3">
     <div class="skill-icon-container">
-      <%= image_tag "ikeatsu-works-icons-premiere-pro.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-premiere-pro.png", class: 'skill-icon' %>
     </div>
     <h2>Movie Edit</h2>
     <h3>Premiere Pro</h3>
@@ -137,12 +138,12 @@
   
   <div class="skill-4">
     <div class="skill-icon-container-2">
-      <%= image_tag "ikeatsu-works-icons-ruby-on-rails.png", class: 'skill-icon' %>
-      <%= image_tag "ikeatsu-works-icons-java-script.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-ruby-on-rails.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-java-script.png", class: 'skill-icon' %>
     </div>
     <div class="skill-icon-container-2">
-      <%= image_tag "ikeatsu-works-icons-html.png", class: 'skill-icon' %>
-      <%= image_tag "ikeatsu-works-icons-css.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-html.png", class: 'skill-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-css.png", class: 'skill-icon' %>
     </div>
     <h2>Programing</h2>
     <h3>Ruby on Rails / Javascript / HTML / CSS</h3>
@@ -153,7 +154,7 @@
   <h2>CONTACT</h2>
   <div class="contact-form-container">
     <div>
-      <%= image_tag "ikeatsu-works-icons-mail.png", class: 'mail-icon' %>
+      <%= image_tag @s3+"ikeatsu-works-icons-mail.png", class: 'mail-icon' %>
     </div>
     <h3>プロジェクトのご相談、その他お問い合わせなど
     <br>どうぞお気軽にご連絡ください</h3>
@@ -179,9 +180,9 @@
   <h2>SNS</h2>
   <h3>各種SNSで情報発信しています！</h3>
   <div class="sns-icon-container">
-    <%= image_tag "ikeatsu-works-icons-twitter.png", class: 'sns-icon' %>
-    <%= image_tag "ikeatsu-works-icons-note.png", class: 'sns-icon' %>
-    <%= image_tag "ikeatsu-works-icons-github.png", class: 'sns-icon' %>
+    <%= image_tag @s3+"ikeatsu-works-icons-twitter.png", class: 'sns-icon' %>
+    <%= image_tag @s3+"ikeatsu-works-icons-note.png", class: 'sns-icon' %>
+    <%= image_tag @s3+"ikeatsu-works-icons-github.png", class: 'sns-icon' %>
   </div>
 </div>
 
