@@ -1,18 +1,10 @@
 body {
-  // background: #637373;
+  background: #637373;
   font-family: 'M PLUS 1p', sans-serif;  
   h2 {
     font-size: 3em;
   }
 }
-
-// .back-image {
-//   position: fixed;
-//   width: 100vw;
-//   overflow: hidden;
-//   object-fit: cover;
-//   z-index: -2;  
-// }
 
 .top-image-container {
   width: 100vw;
@@ -50,7 +42,16 @@ body {
 
 .window-container {
   width: 100vw;
-  height: 50vh;
+  // height: 50vh;
+}
+
+.back-image {
+  // position: fixed;
+  width: 100vw;
+  // height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+  // z-index: -2;  
 }
 
 .services-container {
