@@ -9,10 +9,8 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body style="font-family: 'M PLUS 1p', sans-serif">
-    <div style="background: #637373">
-      <%= yield %>
-    </div>
+  <body style="font-family: 'M PLUS 1p', sans-serif;background: #637373">
+    <%= yield %>
     <footer style="padding-top: 100px;background-color: #383838;width: 100vw;height: 800px;position: relative;overflow: hidden;text-align: center;color: white;font-size: 1.5em;line-height: 3em">
       <div>
         <%= image_tag @s3+"ikeatsu-works-favicon.png", class: 'footer-icon' %>
