@@ -4,21 +4,19 @@
     <title>IkeatsuWorks</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">-->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
     <footer>
       <div>
         <%= image_tag "ikeatsu-works-favicon.png", class: 'footer-icon' %>
         <p>IKE-ATSU WORKS</p>
-        <!--<p><%#= link_to "SERVICE", "#1"%></p>-->
-        <!--<p><%#= link_to "WORKS", "#2"%></p>-->
-        <!--<p><%#= link_to "SKILLS", "#3"%></p>-->
-        <!--<p><%#= link_to "CONTACT", "#4"%></p>-->
         <p><a href="#1">SERVICE</a></p>
         <p><a href="#2">WORKS</a></p>
         <p><a href="#3">SKILLS</a></p>
