@@ -31,6 +31,7 @@ Rails.application.configure do
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
+  config.assets.digest = true  
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   config.action_controller.asset_host = 'ikeatsu-works-herokuapp-com.global.ssl.fastly.net'
   config.static_cache_control = 'public, s-maxage=2592000, max-age=86400'
