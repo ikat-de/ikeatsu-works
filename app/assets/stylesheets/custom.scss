@@ -1,6 +1,6 @@
 h2 {font-size: 3em}
 
-.top-image-container {width: 100vw;height: 100vh;position: relative;display: flex;flex-direction: column;align-items: center;overflow: hidden;object-fit: cover;filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.6))}
+.top-image-container {width: 100vw;height: 100vh;position: relative;display: flex;flex-direction: column;align-items: center;overflow: hidden;object-fit: cover;}
 
 .profile-image {height: 100vh;position: absolute;z-index: -1;}
 
@@ -12,7 +12,7 @@ h2 {font-size: 3em}
 
 .back-image {width: 100vw;overflow: hidden;object-fit: cover}
 
-.services-container {width: 100vw;height: 5600px;background: #EFEFEF;display: flex;flex-direction: column;align-items: center;overflow: hidden;text-align: center;filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.6));
+.services-container {width: 100vw;height: 5600px;background: #EFEFEF;display: flex;flex-direction: column;align-items: center;overflow: hidden;text-align: center;;
   h2 {margin-top: 100px}
   h3 {font-size: 2em}
   p {font-size: 1.5em;line-height: 2em;text-align: center}}
@@ -32,11 +32,11 @@ h2 {font-size: 3em}
 .icons-service {width: 60vw;height: 60vw}
 
 .works-header {height: 200px;display: flex;flex-direction: column;align-items: center;
-  h2 {color: #efefef;font-size: 4em;margin-top: 100px;margin-bottom: 100px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6))}}
+  h2 {color: #efefef;font-size: 4em;margin-top: 100px;margin-bottom: 100px;}}
 
 .horizontal-scroll {overflow-x: auto;white-space: nowrap;-webkit-overflow-scrolling: touch;margin-top: 50px;margin-bottom: 100px;padding-left: 8vw;padding-right: 7vw}
 
-.work-container {display: inline-block;text-align: center;width: 80vw;height: 1350px;background: #EFEFEF;color: #383838;margin-left: 1vw;margin-right: 2vw;margin-bottom: 100px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+.work-container {display: inline-block;text-align: center;width: 80vw;height: 1350px;background: #EFEFEF;color: #383838;margin-left: 1vw;margin-right: 2vw;margin-bottom: 100px;;
   h2 {color: #383838;margin-top: 100px;margin-bottom: 80px}  
   p {font-size: 1.5em;line-height: 2em;margin-top: 50px}}
 
@@ -59,9 +59,9 @@ h2 {font-size: 3em}
 .skill-4 {position: absolute;z-index: 2;margin-top: 4300px}
 
 .contact-container {height: 2600px;width: 100vw;display: flex;flex-direction: column;align-items: center;
-  h2 {color: #efefef;font-size: 4em;margin-top: 100px;margin-bottom: 80px;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6))}}
+  h2 {color: #efefef;font-size: 4em;margin-top: 100px;margin-bottom: 80px;}}
 
-.contact-form-container {display: flex;flex-direction: column;align-items: center;width: 90vw;height: 2100px;background: #EFEFEF;border-radius: 10px;color: #383838;filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+.contact-form-container {display: flex;flex-direction: column;align-items: center;width: 90vw;height: 2100px;background: #EFEFEF;border-radius: 10px;color: #383838;;
   .mail-icon {margin-top: 100px;margin-bottom: 50px;width: 20vw;height: 20vw}
   h3 {font-size: 2em;text-align: center}}
 
