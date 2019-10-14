@@ -151,7 +151,8 @@ h2 {
   overflow: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;  
+  overflow-scrolling: touch;
+  // scroll-padding: 50%;  
   display: flex;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -184,11 +185,13 @@ h2 {
   }
 }
 
-.last-one {
-  width: 10vw;
-  // display: inline-block;
-  flex: none;
-}
+// .last-one {
+//   width: 5vw;
+//   scroll-snap-align: start;
+
+//   // display: inline-block;
+//   flex: none;
+// }
 
 .work-eye-catch {
   width: 100%
