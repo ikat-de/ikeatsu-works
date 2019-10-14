@@ -150,6 +150,7 @@ h2 {
 .horizontal-scroll {
   overflow: auto;
   scroll-snap-type: x;
+  -webkit-overflow-scrolling: touch;  
   display: flex;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -253,7 +254,6 @@ h2 {
 }
 
 .contact-container {
-  height: 2400px;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -271,10 +271,10 @@ h2 {
   flex-direction: column;
   align-items: center;
   width: 90vw;
-  height: 2000px;
   background: #EFEFEF;
   border-radius: 10px;
   color: #383838;
+  margin-bottom: 100px;
   .mail-icon {
     margin-top: 100px;
     margin-bottom: 50px;
@@ -327,7 +327,8 @@ h2 {
   line-height: 3em;
   border-radius: 1.5em;
   text-align: center;
-  margin-top: 100px
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .sns-container {
