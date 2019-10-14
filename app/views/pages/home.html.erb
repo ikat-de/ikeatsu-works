@@ -1,5 +1,4 @@
-<div class="top-image-container">
-  
+<div class="top-image-container" id="5">
   <%= image_tag @s3+"profile.jpg", class: 'profile-image' %>
   <%= image_tag @s3+"ikeatsu-works-favicon-gray.png", class: 'favicon' %>
   <div class="title">
@@ -22,13 +21,13 @@
 </div>
 
 <div class="window-container">
-  <%= image_tag @s3+"design-engineering.jpg", class: 'back-image'%>
+  <%= image_tag @s3+"design-engineering.jpg", class: 'back-image fadein' %>
 </div>
 
 <div class="services-container" id="1">
   <%= image_tag @s3+"brown-stripe.png", class: 'brown-stripe' %>
   
-  <div class="circle fadein" id="fi-1">
+  <div class="circle fadein">
     <h2>SERVICE</h2>  
     <p>デザイン × エンジニアリング の力で
     <br>「0 を 1 に」「1 を 10 に」「10 を 100 以上に」</p>      
@@ -38,39 +37,45 @@
     <br>ワンストップで提供します。</p>      
   </div>
   
-  <div class="service-1 fadein" id="fi-2">
-    <%= image_tag @s3+"ikeatsu-works-icons-service-01.png", class: 'icons-service' %>
-    <h2>新規サービスのデザイン&開発支援</h2>
-    <p>ゼロベースからのアイデア発想・コンセプトメイク・要件定義
-    <br>デザインへの落とし込み、動くモノの試作・開発まで
-    <br>クリエイションを一貫してサポートします。</p>  
-    <h3>2 MONTHS 〜</h3>    
+  <div class="service-1">
+    <%= image_tag @s3+"ikeatsu-works-icons-service-01.png", class: 'icons-service fadein' %>
+    <div class="fadein">
+      <h2>新規サービスのデザイン&開発支援</h2>
+      <p>ゼロベースからのアイデア発想・コンセプトメイク・要件定義
+      <br>デザインへの落とし込み、動くモノの試作・開発まで
+      <br>クリエイションを一貫してサポートします。</p>  
+      <h3>2 MONTHS 〜</h3>    
+    </div>
   </div>
 
-  <div class="service-2 fadein" id="fi-3">
-    <%= image_tag @s3+"ikeatsu-works-icons-service-02.png", class: 'icons-service' %>
-    <h2>既存サービスの改善</h2>  
-    <p>ユーザー体験向上のボトルネックとなっている課題を
-    <br>UI/UXデザインおよびブランディングの視点で分析し
-    <br>体系的に再構築した改善案を提案いたします。</p>  
-    <h3>1 MONTHS 〜</h3>
+  <div class="service-2">
+    <%= image_tag @s3+"ikeatsu-works-icons-service-02.png", class: 'icons-service fadein' %>
+    <div class="fadein">
+      <h2>既存サービスの改善</h2>  
+      <p>ユーザー体験向上のボトルネックとなっている課題を
+      <br>UI/UXデザインおよびブランディングの視点で分析し
+      <br>体系的に再構築した改善案を提案いたします。</p>  
+      <h3>1 MONTHS 〜</h3>
+    </div>
   </div>
   
-  <div class="service-3 fadein" id="fi-4">
-    <%= image_tag @s3+"ikeatsu-works-icons-service-03.png", class: 'icons-service' %>
-    <h2>デザインコンサルティング&製作</h2>  
-    <p>webサイト製作・インフォグラフィックスのデザインなど
-    <br>アートディレクションからデザイン制作まで
-    <br>幅広いデザイン課題に対応いたします。</p>  
-    <h3>1 WEEK 〜</h3>
+  <div class="service-3">
+    <%= image_tag @s3+"ikeatsu-works-icons-service-03.png", class: 'icons-service fadein' %>
+    <div class="fadein">
+      <h2>デザインコンサルティング&製作</h2>  
+      <p>webサイト製作・インフォグラフィックスのデザインなど
+      <br>アートディレクションからデザイン制作まで
+      <br>幅広いデザイン課題に対応いたします。</p>  
+      <h3>1 WEEK 〜</h3>
+    </div>
   </div>
 </div>
 
 <div class="works-header" id="2">
-  <h2>WORKS</h2>
+  <h2 class="fadein">WORKS</h2>
 </div>
 
-<div class="horizontal-scroll fadein" id="fi-5">
+<div class="horizontal-scroll fadein">
   <div class="work-container">
     <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
     <h2>COMMIT-san</h2>
@@ -95,12 +100,13 @@
       <span>UIUX Design / Web App Development</span>
     </div>    
   </div>
+  <div class="last-one"></div>
 </div>
 
 <div class="services-container" id="3">
   <%= image_tag @s3+"brown-stripe.png", class: 'brown-stripe' %>
   
-  <div class="circle fadein" id="fi-6">
+  <div class="circle fadein">
     <h2>SKILL SET</h2>  
     <p>様々なツールを駆使した
     <br>デザインと</p>      
@@ -109,50 +115,58 @@
     <p>アイデアをカタチにします。</p>      
   </div>
   
-  <div class="skill-1 fadein" id="fi-7">
-    <div class="skill-icon-container">
+  <div class="skill-1">
+    <div class="skill-icon-container fadein">
       <%= image_tag @s3+"ikeatsu-works-icons-photoshop.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-illustrator.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-figma.png", class: 'skill-icon' %>
     </div>
-    <h2>Graphic Design</h2>
-    <h3>Photoshop / Illustrator / Figma</h3>
+    <div class="fadein">
+      <h2>Graphic Design</h2>
+      <h3>Photoshop / Illustrator / Figma</h3>
+    </div>  
   </div>
   
-  <div class="skill-2 fadein" id="fi-8">
-    <div class="skill-icon-container-2">
+  <div class="skill-2">
+    <div class="skill-icon-container-2 fadein">
       <%= image_tag @s3+"ikeatsu-works-icons-cinema4d.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-keyshot.png", class: 'skill-icon' %>
     </div>
-    <h2>3D Modeling</h2>
-    <h3>Cinema 4D / Key shot</h3>
+    <div class="fadein">
+      <h2>3D Modeling</h2>
+      <h3>Cinema 4D / Key shot</h3>
+    </div>
   </div>
   
-  <div class="skill-3 fadein" id="fi-9">
-    <div class="skill-icon-container">
+  <div class="skill-3">
+    <div class="skill-icon-container fadein">
       <%= image_tag @s3+"ikeatsu-works-icons-premiere-pro.png", class: 'skill-icon' %>
     </div>
-    <h2>Movie Edit</h2>
-    <h3>Premiere Pro</h3>
+    <div class="fadein">
+      <h2>Movie Edit</h2>
+      <h3>Premiere Pro</h3>
+    </div>
   </div>
   
-  <div class="skill-4 fadein" id="fi-10">
-    <div class="skill-icon-container-2">
+  <div class="skill-4">
+    <div class="skill-icon-container-2 fadein">
       <%= image_tag @s3+"ikeatsu-works-icons-ruby-on-rails.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-java-script.png", class: 'skill-icon' %>
     </div>
-    <div class="skill-icon-container-2">
+    <div class="skill-icon-container-2 fadein">
       <%= image_tag @s3+"ikeatsu-works-icons-html.png", class: 'skill-icon' %>
       <%= image_tag @s3+"ikeatsu-works-icons-css.png", class: 'skill-icon' %>
     </div>
-    <h2>Programing</h2>
-    <h3>Ruby on Rails / Javascript / HTML / CSS</h3>
+    <div class="fadein">
+      <h2>Programing</h2>
+      <h3>Ruby on Rails / Javascript / HTML / CSS</h3>
+    </div>
   </div>
 </div>
 
 <div class="contact-container" id="4">
-  <h2>CONTACT</h2>
-  <div class="contact-form-container fadein" id="fi-11">
+  <h2 class="fadein">CONTACT</h2>
+  <div class="contact-form-container fadein">
     <div>
       <%= image_tag @s3+"ikeatsu-works-icons-mail.png", class: 'mail-icon' %>
     </div>
@@ -177,35 +191,43 @@
 </div>
 
 <div class="sns-container">
-  <h2>SNS</h2>
-  <h3>各種SNSで情報発信しています！</h3>
-  <div class="sns-icon-container fadein" id="fi-12">
-    <%= image_tag @s3+"ikeatsu-works-icons-twitter.png", class: 'sns-icon' %>
-    <%= image_tag @s3+"ikeatsu-works-icons-note.png", class: 'sns-icon' %>
-    <%= image_tag @s3+"ikeatsu-works-icons-github.png", class: 'sns-icon' %>
+  <div class="fadein">
+    <h2>SNS</h2>
+    <h3>各種SNSで情報発信しています！</h3>
+  </div>
+  <div class="sns-icon-container fadein">
+    <a href="https://twitter.com/ikat_de" target="_blank">
+      <%= image_tag @s3+"ikeatsu-works-icons-twitter.png", class: 'sns-icon' %>
+    </a>
+    <a href="https://note.mu/ikat_de" target="_blank">
+      <%= image_tag @s3+"ikeatsu-works-icons-note.png", class: 'sns-icon' %>
+    </a>    
+    <a href="https://github.com/ikat-de" target="_blank">
+      <%= image_tag @s3+"ikeatsu-works-icons-github.png", class: 'sns-icon' %>
+    </a>    
   </div>
 </div>
 
 <script>
-$(window).scroll(function (){
-  $('[id^=fi-]').each(function(){
-    var elemPos = $(this).offset().top,
-      scroll = $(window).scrollTop(),
-      windowHeight = $(window).height();
-    if (scroll > elemPos - windowHeight + 200){
-      $(this).addClass('scrollin');
-    }
+  $(window).scroll(function (){
+    $('.fadein').each(function(){
+      var elemPos = $(this).offset().top,
+        scroll = $(window).scrollTop(),
+        windowHeight = $(window).height();
+      if (scroll > elemPos - windowHeight + 300){
+        $(this).addClass('scrollin');
+      }
+    });
+  });  
+  
+  $(function(){
+    $('a[href^="#"]').click(function(){
+      var speed = 1000;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
   });
-});  
-
-$(function(){
-  $('a[href^="#"]').click(function(){
-    var speed = 1000;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
-    $("html, body").animate({scrollTop:position}, speed, "swing");
-    return false;
-  });
-});
 </script>
