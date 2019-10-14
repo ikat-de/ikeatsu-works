@@ -149,8 +149,9 @@ h2 {
 
 .horizontal-scroll {
   overflow: auto;
-  scroll-snap-type: x;
-  -webkit-overflow-scrolling: touch;  
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;  
   display: flex;
   margin-top: 50px;
   margin-bottom: 100px;
