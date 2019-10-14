@@ -148,11 +148,12 @@ h2 {
 }
 
 .horizontal-scroll {
-  overflow: auto;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vw);
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
-  // scroll-padding: 50%;  
   display: flex;
   margin-top: 50px;
   margin-bottom: 100px;
@@ -163,7 +164,6 @@ h2 {
   scroll-snap-align: center;
   flex: none;
   border-radius: 10px;
-  // display: inline-block;
   text-align: center;
   width: 80vw;
   height: 1350px;
@@ -185,13 +185,10 @@ h2 {
   }
 }
 
-// .last-one {
-//   width: 5vw;
-//   scroll-snap-align: start;
-
-//   // display: inline-block;
-//   flex: none;
-// }
+.last-one {
+  width: 10vw;
+  flex: none;
+}
 
 .work-eye-catch {
   width: 100%
