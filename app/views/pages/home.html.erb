@@ -1,4 +1,5 @@
 <div class="top-image-container scrollify" id="1">
+  <%= image_tag @s3+"ikeatsu-works-logo.png", class: 'for-smartphone-logo' %>
   <%= image_tag @s3+"profile.jpg", class: 'profile-image' %>
 </div>
 
@@ -6,70 +7,72 @@
   <%= image_tag @s3+"design-engineering-02.jpg", class: 'back-image fadein' %>
 </div>
 
-<div class="work-container scrollify" id="2">
-  <div>
-    <%= image_tag @s3+"eye-catch-vsprogram.jpg", class: 'work-eye-catch fadein' %>
+<div id="2">
+  <div class="work-container scrollify">
+    <div>
+      <%= image_tag @s3+"eye-catch-vsprogram.jpg", class: 'work-eye-catch fadein' %>
+    </div>
+    <div class="work-text-container fadein">
+      <h2>V.S.Program</h2>
+      <p>Design Software Concept
+      <br>Design System Development /  Product Design / 3D Modelingt</p>
+    </div>
   </div>
-  <div class="work-text-container fadein">
-    <h2>V.S.Program</h2>
-    <p>Design Software Concept
-    <br>Design System Development /  Product Design / 3D Modelingt</p>
+  
+  <div class="work-container scrollify">
+    <div>
+      <%= image_tag @s3+"eye-catch-silphy.jpg", class: 'work-eye-catch fadein' %>
+    </div>
+    <div class="work-text-container fadein">
+      <h2>NISSAN SILPHY</h2>
+      <p>Production Car
+      <br>Interior Color Material Finish Design</p>
+    </div>
   </div>
-</div>
-
-<div class="work-container scrollify">
-  <div>
-    <%= image_tag @s3+"eye-catch-silphy.jpg", class: 'work-eye-catch fadein' %>
+  
+  <div class="work-container scrollify">
+    <div>
+      <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch fadein' %>
+    </div>
+    <div class="work-text-container fadein">
+      <h2>COMMIT-san</h2>
+      <p>Web Application
+      <br>UIUX Design / Web Application Development</p>
+    </div>
   </div>
-  <div class="work-text-container fadein">
-    <h2>NISSAN SILPHY</h2>
-    <p>Production Car
-    <br>Interior Color Material Finish Design</p>
+  
+  <div class="work-container scrollify">
+    <div>
+      <%= image_tag @s3+"eye-catch-patrol.jpg", class: 'work-eye-catch fadein' %>
+    </div>
+    <div class="work-text-container fadein">
+      <h2>NISSAN PATROL</h2>
+      <p>Production Car
+      <br>Interior Color Material Finish Design</p>
+    </div>
   </div>
-</div>
-
-<div class="work-container scrollify">
-  <div>
-    <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch fadein' %>
+  
+  <div class="work-container scrollify">
+    <div>
+      <%= image_tag @s3+"eye-catch-4dflower.jpg", class: 'work-eye-catch fadein' %>
+    </div>
+    <div class="work-text-container fadein">
+      <h2>4D flower</h2>
+      <p>Product Design Concept
+      <br>Prduct Design / 3D Modeling / Graphic Design</p>
+    </div>
   </div>
-  <div class="work-text-container fadein">
-    <h2>COMMIT-san</h2>
-    <p>Web Application
-    <br>UIUX Design / Web Application Development</p>
-  </div>
-</div>
-
-<div class="work-container scrollify">
-  <div>
-    <%= image_tag @s3+"eye-catch-patrol.jpg", class: 'work-eye-catch fadein' %>
-  </div>
-  <div class="work-text-container fadein">
-    <h2>NISSAN PATROL</h2>
-    <p>Production Car
-    <br>Interior Color Material Finish Design</p>
-  </div>
-</div>
-
-<div class="work-container scrollify">
-  <div>
-    <%= image_tag @s3+"eye-catch-4dflower.jpg", class: 'work-eye-catch fadein' %>
-  </div>
-  <div class="work-text-container fadein">
-    <h2>4D flower</h2>
-    <p>Product Design Concept
-    <br>Prduct Design / 3D Modeling / Graphic Design</p>
-  </div>
-</div>
-
-<div class="work-container scrollify">
-  <div>
-    <%= image_tag @s3+"eye-catch-zgtr.jpg", class: 'work-eye-catch fadein' %>
-  </div>
-  <div class="work-text-container fadein">
-    <h2 class="text-zgtr">NISSAN GT-R / Fairlady-Z
-    <br>50th Anniversary Edition</h2>
-    <p>Production Car
-    <br>Color Material Finish Design</p>
+  
+  <div class="work-container scrollify">
+    <div>
+      <%= image_tag @s3+"eye-catch-zgtr.jpg", class: 'work-eye-catch fadein' %>
+    </div>
+    <div class="work-text-container fadein">
+      <h2 class="text-zgtr">NISSAN GT-R / Fairlady-Z
+      <br>50th Anniversary Edition</h2>
+      <p>Production Car
+      <br>Color Material Finish Design</p>
+    </div>
   </div>
 </div>
 
@@ -117,6 +120,7 @@
     </div>
   </div>
 </div>
+
 
 <div class="services-wrapper scrollify" id="4">
   <div class="service-container fadein">
@@ -214,6 +218,73 @@
         $(this).addClass('scrollin');
       }
     });
+  });  
+  
+  $(function(){
+  	var block = $('#2'),
+  		  Window = $(window);
+  
+  	Window.scroll(function() {
+  		block.each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#2"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#2"]').removeClass("selected");
+  			}
+  		});
+  	});
+  });  
+  
+  $(function(){
+  	var block = $('#3'),
+  		  Window = $(window);
+  
+  	Window.scroll(function() {
+  		block.each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#"]').removeClass("selected");
+  				$('a[href^="#3"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#3"]').removeClass("selected");
+  			}
+  		});
+  	});
+  });  
+  
+  $(function(){
+  	var block = $('#4'),
+  		  Window = $(window);
+  
+  	Window.scroll(function() {
+  		block.each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#"]').removeClass("selected");
+  				$('a[href^="#4"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#4"]').removeClass("selected");
+  			}
+  		});
+  	});
+  });  
+  
+  $(function(){
+  	var block = $('#5'),
+  		  Window = $(window);
+  
+  	Window.scroll(function() {
+  		block.each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#"]').removeClass("selected");
+  				$('a[href^="#5"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#5"]').removeClass("selected");
+  			}
+  		});
+  	});
   });  
   
   $(function(){

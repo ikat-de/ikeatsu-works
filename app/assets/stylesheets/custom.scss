@@ -98,9 +98,8 @@ input, select {
 }
 
 // ---------------------------------
-// CSS Reset END
+// for JQuery Animation
 // ---------------------------------
-
 
 .fadein {
   opacity: 0;
@@ -113,273 +112,546 @@ input, select {
   transform: translate(0, 0)
 }
 
-h2 {
-  font-size: 3em
-}
 
-
-// ---------------------------------
-// header menu
-// ---------------------------------
-
-header {
-  width: 300px;
-  height: 100vh;
-  position: fixed;
-  z-index: 5;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-}
-
-.header-container {
-  height: 45vw;
-  width: 250px;
-  margin-top: 5vw;
-  margin-left: 5vw;
-}
-
-.header-logo {
-  height: 50px;
-}
-
-.menu-container {
-  margin-top: 30px;
-  a {
-    color: #969696;
-    line-height: 3em;
-    font-size: 1em;
-    text-decoration: none;
-  }  
-}
-
-.top-image-container {
-  width: 100vw;
-  height: 100vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  object-fit: cover;
-  background: white;
-}
-
-.profile-image {
-  height: 170vh;
-  position: absolute;
-  bottom: 0;
-}
-
-.favicon {
-  width: 25vw;
-  height: 25vw;
-  margin-top: 20vh;
-  margin-bottom: 1vh;
-}
-
-.title {
-  width: 25vw;
-  font-size: 3em;
-  color: #4b4b4b;
-  display: flex;
-  justify-content: space-between
-}
-
-// ---------------------------------
-// concept
-// ---------------------------------
-
-
-.concept-container {
-  width: 100vw;
-  height: 100vh;
-  background: #637373;
-  position: relative;
-}
-
-.back-image {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  object-fit: cover;
-  position: absolute;
-  margin: auto;
-}
-
-
-// ---------------------------------
-// works
-// ---------------------------------
-
-.work-container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-04.jpg");
-  background-size: cover;
-  background-position: center center;  
-  color: #4b4b4b;
-}
-
-
-.work-eye-catch {
-  height: 45vw;
-  margin-right: 5vw;
-  width: 45vw;
-  object-fit: contain;
-}
-
-.work-text-container {
-  width: 35vw;
-  height: 45vw;
-  text-align: right;
-  margin-right: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  h2 {
+/*　for Smart Phone Vartical　*/
+@media screen and (max-width:480px) { 
+  // ---------------------------------
+  // header menu
+  // ---------------------------------
+  
+  header {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .header-container {
+    height: 60px;
+    width: 100%;
+    margin-bottom: 0;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .header-logo {
+    display: none;
+  }
+  
+  .menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a {
+      color: white;
+      line-height: 60px;
+      font-size: 0.7em;
+      text-decoration: none;
+      width: 25vw;
+      text-align: center;
+    }  
+  }
+  
+  .selected {
+    background: black;
+  }
+  
+  // ---------------------------------
+  // top image
+  // ---------------------------------
+  
+  .top-image-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    object-fit: cover;
+    background: white;
+  }
+  
+  .for-smartphone-logo {
+    width: 40%;
+    position: absolute;
+    z-index: 3;
+    top: 20vh;
+  }
+  
+  .profile-image {
+    height: 120vh;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+  }
+  
+  // ---------------------------------
+  // concept image
+  // ---------------------------------
+  
+  .concept-container {
+    width: 100vw;
+    height: 100vh;
+    background: #637373;
+    position: relative;
+  }
+  
+  .back-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    position: absolute;
+    margin: auto;
+  }
+  
+  
+  // ---------------------------------
+  // works
+  // ---------------------------------
+  
+  .work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-04-var.jpg");
+    background-size: cover;
+    background-position: center center; 
     color: #4b4b4b;
-    font-size: 2em;
-    line-height: 1.5em;
-    margin-bottom: 0;
   }
-  p {
-    margin-top: 1.5em;
-    font-size: 0.7em;
-    line-height: 2em;
+  
+  
+  .work-eye-catch {
+    margin-top: 5vw;
+    height: 90vw;
+    width: 90vw;
+    object-fit: contain;
   }
-  .text-zgtr {
-    font-size: 2em;
+  
+  .work-text-container {
+    margin-top: 10vw;
+    width: 90vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      color: #4b4b4b;
+      font-size: 1.5em;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 1.5em;
+      font-size: 0.3em;
+      line-height: 2em;
+    }
+    .text-zgtr {
+      font-size: 1.2em;
+    }
   }
-}
-
-
-// ---------------------------------
-// skills & contact
-// ---------------------------------
-
-.skills-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-01.jpg");
-  background-size: cover;
-  background-position: center center;  
-  color: #4b4b4b;  
-}
-
-.contact-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-03.jpg");
-  background-size: cover;
-  background-position: center center;  
-  color: #4b4b4b;  
-}
-
-.skill-container {
-  height: 20vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.skill-text-container {
-  color: #e9e9e9;
-  text-align: right;
-  padding-bottom: 30px;
-  margin-right: 50px;
-  h3 {
-    font-size: 2em;
-    line-height: 1em;
-    margin-bottom: 0;
+  
+  
+  // ---------------------------------
+  // skills & contact
+  // ---------------------------------
+  
+  .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-01-var.jpg");
+    background-size: cover;
+    background-position: center center;  
+    color: #4b4b4b;  
   }
-  p {
-    font-size: 0.7em;
-    margin-top: 1.5em;
-    line-height: 1em;
+  
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-03-var.jpg");
+    background-size: cover;
+    background-position: center center;  
+    color: #4b4b4b;  
+  }
+  
+  .skill-container {
+    height: 20vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-text-container {
+    color: #e9e9e9;
+    text-align: center;
+    padding-bottom: 30px;
+    h3 {
+      font-size: 1.2em;
+      line-height: 1em;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 0.3em;
+      margin-top: 1.5em;
+      line-height: 1em;
+    }  
+  }
+  
+  .skill-icon-container {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+  }
+  
+  .contact-icon-container {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+  }
+  
+  .skill-icon {
+    width: 15vw;
+    height: 15vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 5vw;
+  }
+  
+  
+  // ---------------------------------
+  // service
+  // ---------------------------------
+  
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-02-var.jpg");
+    background-size: cover;
+    background-position: center center;  
+    color: #4b4b4b;  
+  }
+  
+  .service-container {
+    height: 25vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+  
+  .service-text-container {
+    color: #4b4b4b;
+    text-align: center;
+    padding-bottom: 50px;
+    h3 {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 1em;
+      font-size: 0.3em;
+      line-height: 1.5em;
+    }  
+  }
+  
+  .service-icon-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .service-icon {
+    width: 20vw;
+    height: 20vw;
+    margin-bottom: 1em;
+  }
+  
+  
+  .footer-text {
+    text-align: center;
+    color: #969696;
+    font-size: 0.5em;
   }  
 }
 
-.skill-icon-container {
-  width: 30vw;
+/*　for Smart Phone Horizontal　*/
+@media screen and (min-width:480px) and ( max-width:896px) {
 }
 
-.contact-icon-container {
-  width: 15vw;
+/*　for Tablet Vartical　*/
+@media screen and (min-width:896px) and ( max-width:1024px) {
 }
 
-.skill-icon {
-  width: 70px;
-  height: 70px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-
-// ---------------------------------
-// service
-// ---------------------------------
-
-.services-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-02.jpg");
-  background-size: cover;
-  background-position: center center;  
-  color: #4b4b4b;  
-}
-
-.service-container {
-  height: 25vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.service-text-container {
-  color: #4b4b4b;
-  text-align: right;
-  padding-bottom: 50px;
-  margin-right: 50px;
-  h3 {
-    font-size: 2em;
-    line-height: 1.5em;
-    margin-bottom: 0;
+/*　for PC and Tablet Horizontal　*/
+@media screen and (min-width:1024px) {
+  // ---------------------------------
+  // header menu
+  // ---------------------------------
+  
+  header {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
   }
-  p {
-    margin-top: 1.5em;
-    font-size: 0.7em;
-    line-height: 2em;
-  }  
-}
-
-.service-icon-container {
-  width: 20vw;
-}
-
-.service-icon {
-  width: 150px;
-  height: 150px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-
-.footer-text {
-  text-align: center;
-  color: #969696;
-  font-size: 0.5em;
+  
+  .header-container {
+    height: 45vw;
+    width: 250px;
+    margin-top: 5vw;
+    margin-left: 5vw;
+  }
+  
+  .header-logo {
+    height: 50px;
+  }
+  
+  .menu-container {
+    margin-top: 30px;
+    a {
+      color: #969696;
+      line-height: 3em;
+      font-size: 1em;
+      text-decoration: none;
+    }  
+  }
+  
+  // ---------------------------------
+  // top image
+  // ---------------------------------
+  
+  .top-image-container {
+    width: 100vw;
+    height: 100vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    object-fit: cover;
+    background: white;
+  }
+  
+  .profile-image {
+    height: 170vh;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  // ---------------------------------
+  // concept image
+  // ---------------------------------
+  
+  .concept-container {
+    width: 100vw;
+    height: 100vh;
+    background: #637373;
+    position: relative;
+  }
+  
+  .back-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    position: absolute;
+    margin: auto;
+  }
+  
+  
+  // ---------------------------------
+  // works
+  // ---------------------------------
+  
+  .work-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-04.jpg");
+    background-size: cover;
+    background-position: center center;  
+    color: #4b4b4b;
+  }
+  
+  
+  .work-eye-catch {
+    height: 45vw;
+    margin-right: 5vw;
+    width: 45vw;
+    object-fit: contain;
+  }
+  
+  .work-text-container {
+    width: 35vw;
+    height: 45vw;
+    text-align: right;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    h2 {
+      color: #4b4b4b;
+      font-size: 2em;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 1.5em;
+      font-size: 0.7em;
+      line-height: 2em;
+    }
+    .text-zgtr {
+      font-size: 2em;
+    }
+  }
+  
+  
+  // ---------------------------------
+  // skills & contact
+  // ---------------------------------
+  
+  .skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-01.jpg");
+    background-size: cover;
+    background-position: center center;  
+    color: #4b4b4b;  
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-03.jpg");
+    background-size: cover;
+    background-position: center center;  
+    color: #4b4b4b;  
+  }
+  
+  .skill-container {
+    height: 20vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .skill-text-container {
+    color: #e9e9e9;
+    text-align: right;
+    padding-bottom: 30px;
+    margin-right: 50px;
+    h3 {
+      font-size: 2em;
+      line-height: 1em;
+      margin-bottom: 0;
+    }
+    p {
+      font-size: 0.7em;
+      margin-top: 1.5em;
+      line-height: 1em;
+    }  
+  }
+  
+  .skill-icon-container {
+    width: 30vw;
+  }
+  
+  .contact-icon-container {
+    width: 15vw;
+  }
+  
+  .skill-icon {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  
+  // ---------------------------------
+  // service
+  // ---------------------------------
+  
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-02.jpg");
+    background-size: cover;
+    background-position: center center;  
+    color: #4b4b4b;  
+  }
+  
+  .service-container {
+    height: 25vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .service-text-container {
+    color: #4b4b4b;
+    text-align: right;
+    padding-bottom: 50px;
+    margin-right: 50px;
+    h3 {
+      font-size: 2em;
+      line-height: 1.5em;
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 1.5em;
+      font-size: 0.7em;
+      line-height: 2em;
+    }  
+  }
+  
+  .service-icon-container {
+    width: 20vw;
+  }
+  
+  .service-icon {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .footer-text {
+    text-align: center;
+    color: #969696;
+    font-size: 0.5em;
+  }
 }
