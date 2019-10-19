@@ -237,6 +237,48 @@
       $('#nav-toggle').on('click', function() {
           $('body').toggleClass('open');
       });
+  });
+  
+  $(function(){
+		Window = $(window);
+  	Window.scroll(function() {
+  		$("#2").each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#"]').removeClass("selected");
+  				$('a[href^="#2"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#2"]').removeClass("selected");
+  			}
+  		});
+  		$("#3").each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#"]').removeClass("selected");
+  				$('a[href^="#3"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#3"]').removeClass("selected");
+  			}
+  		});
+  		$("#4").each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#"]').removeClass("selected");
+  				$('a[href^="#4"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#4"]').removeClass("selected");
+  			}
+  		});
+  		$("#5").each(function() {
+  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
+  				$('a[href^="#"]').removeClass("selected");
+  				$('a[href^="#5"]').addClass("selected");
+  			}
+  			else {
+  				$('a[href^="#5"]').removeClass("selected");
+  			}
+  		});
+  	});
   });  
 </script>
 
