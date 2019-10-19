@@ -13,14 +13,18 @@
 
   <body style="font-family: 'M PLUS 1p', sans-serif;background: #e9e9e9">
     <header>
-        <a href="#1">
-          <%= image_tag @s3+"ikeatsu-works-logo.png", class: 'header-logo' %>
-        </a>
-      <div class="menu-container">
-        <p><a href="#2">WORKS</a></p>
-        <p><a href="#3">SKILLS</a></p>
-        <p><a href="#4">SERVICE</a></p>
-        <p><a href="#5">CONTACT</a></p>
+      <div class="header-container">
+        <div>
+          <a href="#1">
+            <%= image_tag @s3+"ikeatsu-works-logo.png", class: 'header-logo' %>
+          </a>
+        </div>
+        <div class="menu-container">
+          <p><a href="#2">- WORKS</a></p>
+          <p><a href="#3">- SKILLS</a></p>
+          <p><a href="#4">- SERVICE</a></p>
+          <p><a href="#5">- CONTACT</a></p>
+        </div>
       </div>
     </header>
     <%= yield %>
