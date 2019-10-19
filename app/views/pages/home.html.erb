@@ -1,3 +1,4 @@
+     
 <div class="top-image-container scrollify" id="1">
   <%= image_tag @s3+"ikeatsu-works-logo.png", class: 'for-smartphone-logo' %>
   <%= image_tag @s3+"profile.jpg", class: 'profile-image' %>
@@ -219,76 +220,10 @@
       }
     });
   });  
-  
-  $(function(){
-  	var block = $('#2'),
-  		  Window = $(window);
-  
-  	Window.scroll(function() {
-  		block.each(function() {
-  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
-  				$('a[href^="#2"]').addClass("selected");
-  			}
-  			else {
-  				$('a[href^="#2"]').removeClass("selected");
-  			}
-  		});
-  	});
-  });  
-  
-  $(function(){
-  	var block = $('#3'),
-  		  Window = $(window);
-  
-  	Window.scroll(function() {
-  		block.each(function() {
-  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
-  				$('a[href^="#"]').removeClass("selected");
-  				$('a[href^="#3"]').addClass("selected");
-  			}
-  			else {
-  				$('a[href^="#3"]').removeClass("selected");
-  			}
-  		});
-  	});
-  });  
-  
-  $(function(){
-  	var block = $('#4'),
-  		  Window = $(window);
-  
-  	Window.scroll(function() {
-  		block.each(function() {
-  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
-  				$('a[href^="#"]').removeClass("selected");
-  				$('a[href^="#4"]').addClass("selected");
-  			}
-  			else {
-  				$('a[href^="#4"]').removeClass("selected");
-  			}
-  		});
-  	});
-  });  
-  
-  $(function(){
-  	var block = $('#5'),
-  		  Window = $(window);
-  
-  	Window.scroll(function() {
-  		block.each(function() {
-  			if (Window.scrollTop() > $(this).offset().top - Window.height()) {
-  				$('a[href^="#"]').removeClass("selected");
-  				$('a[href^="#5"]').addClass("selected");
-  			}
-  			else {
-  				$('a[href^="#5"]').removeClass("selected");
-  			}
-  		});
-  	});
-  });  
-  
+
   $(function(){
     $('a[href^="#"]').click(function(){
+      $('body').toggleClass('open');
       var speed = 1000;
       var href= $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
@@ -297,4 +232,11 @@
       return false;
     });
   });
+  
+  $(function () {
+      $('#nav-toggle').on('click', function() {
+          $('body').toggleClass('open');
+      });
+  });  
 </script>
+

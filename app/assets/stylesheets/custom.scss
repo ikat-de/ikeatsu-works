@@ -116,47 +116,166 @@ input, select {
 /*　for Smart Phone Vartical　*/
 @media screen and (max-width:480px) { 
   // ---------------------------------
-  // header menu
+  // header & menu
   // ---------------------------------
   
   header {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: 5;
-    display: flex;
-    align-items: flex-end;
-  }
-  
-  .header-container {
-    height: 60px;
-    width: 100%;
-    margin-bottom: 0;
-    bottom: 0px;
-    background: rgba(0, 0, 0, 0.3);
-  }
-  
-  .header-logo {
     display: none;
   }
+
+
+  #nav-toggle {
+      position: fixed;
+      bottom: 0px;
+      right: 0px;
+      cursor: pointer;
+      background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-icons-menu.png");
+      background-size: cover;
+      width: 70px;
+      height: 70px;
+
+    > div {
+      position: relative;
+    }
+    
+    span {
+      width: 40%;
+      height: 3px;
+      left: 24px;
+      display: block;
+      background: #383838;
+      position: absolute;
+      transition: transform .6s ease-in-out, top .5s ease;
+      
+      &:nth-child(1) {
+        top: 26px;
+      }
+      &:nth-child(2) {
+        top: 36px;
+      }
+      &:nth-child(3) {
+        top: 46px;
+      }
+    }
   
-  .menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    a {
-      color: white;
-      line-height: 60px;
-      font-size: 0.7em;
-      text-decoration: none;
-      width: 25vw;
+    &:hover span:nth-child(1) {
+      top: 26px;
+    }
+    &:hover span:nth-child(2) {
+      top: 36px;
+    }
+    &:hover span:nth-child(3) {
+      top: 46px;
+    }
+  }
+  
+  .open {
+    #nav-toggle span {
+      background: #383838;
+      
+      &:nth-child(1) {
+        top: 36px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        top: 36px;
+        width: 0;
+        left: 50%;
+      }
+      &:nth-child(3) {
+        top: 36px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  
+  /* z-index */
+  #nav-toggle {
+      z-index: 1000;
+  }
+  #container {
+      z-index: 900;
+  }
+  
+  #gloval-nav {
+      background: rgba(0, 0, 0, 0.7);
+      color: #c4c4c4;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 990;
       text-align: center;
-    }  
+      display: flex;
+      visibility: hidden;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5em;
+      line-height: 3em;
+      opacity: 0;
+      transition: opacity .6s ease, visibility .6s ease;
   }
   
-  .selected {
-    background: black;
+  #gloval-nav {
+    a {
+      display: block;
+      color: #c4c4c4;
+      text-decoration: none;
+      transition: color .6s ease;
+      
+      &:hover {
+        color: #666;
+      }
+    }
+    
+    ul {
+      list-style: none;
+      
+      li {
+        opacity: 0;
+        transform: translateX(200px);
+        transition:  transform .6s ease, opacity .2s ease;
+  
+        &:nth-child(2) {
+          transition-delay: .15s;
+        }
+        &:nth-child(3) {
+          transition-delay: .3s;
+        }
+        &:nth-child(4) {
+          transition-delay: .45s;
+        }
+        &:nth-child(5) {
+          transition-delay: .6s;
+        }
+        &:nth-child(6) {
+          transition-delay: .75s;
+        }
+        &:nth-child(7) {
+          transition-delay: .9s;
+        }
+      }
+    }
+  } 
+  
+  /* open */
+  .open {
+      overflow: hidden;
+    
+    #gloval-nav {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    #gloval-nav li {
+      opacity: 1;
+      transform: translateX(0);
+      transition:  transform 1s ease, opacity .9s ease;
+    }
   }
+
   
   // ---------------------------------
   // top image
@@ -349,13 +468,11 @@ input, select {
   }
   
   .service-container {
-    height: 25vh;
+    height: 30vh;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
   }
   
   .service-text-container {
