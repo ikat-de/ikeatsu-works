@@ -97,21 +97,6 @@ input, select {
     vertical-align:middle;
 }
 
-// ---------------------------------
-// for JQuery Animation
-// ---------------------------------
-
-// .fadein {
-//   opacity: 0;
-//   transform: translate(0, 50px);
-//   transition: all 1500ms
-// }
-
-// .fadein.scrollin {
-//   opacity: 1;
-//   transform: translate(0, 0)
-// }
-
 
 /*　for Smart Phone Vartical　*/
 @media screen and (max-width:559px) { 
@@ -1200,7 +1185,7 @@ label {
   width: 100%;
   height: 100%;
   margin: auto;
-  z-index: 10;
+  z-index: 2000;
 }
 
 .modalWrap {
@@ -1217,7 +1202,7 @@ label {
   cursor: pointer;
   opacity: 0.7;
   background-color: #000;
-  z-index: 2;
+  z-index: 1900;
 }
 .modalBg label {
   position: absolute;
@@ -1237,7 +1222,7 @@ label {
   max-width: 640px;
   height: 86%;
   margin: auto;
-  z-index: 3;
+  z-index: 1950;
 }
 
 .modalInner {
