@@ -1,16 +1,16 @@
      
-<div class="top-image-container scrollify" id="1">
+<div class="top-image-container sclfy" id="1">
   <%= image_tag @s3+"ikeatsu-works-logo.png", class: 'for-smartphone-logo' %>
   <%= image_tag @s3+"profile.jpg", class: 'profile-image' %>
 </div>
 
-<div class="concept-container scrollify">
+<div class="concept-container sclfy">
   <%= image_tag @s3+"design-engineering-02.jpg", class: 'back-image' %>
 </div>
 
 <!--V.S.Program-->
   <input type="checkbox" id="modal01" class="modalCheck">
-  <div class="wrapper scrollify work-container" id="2">
+  <div class="wrapper sclfy work-container" id="2">
       <div class="btn">
         <label for="modal01">
           <%= image_tag @s3+"eye-catch-vsprogram.jpg", class: 'work-eye-catch' %>
@@ -35,23 +35,23 @@
                     実際のデザイン開発では、最終段階で構造強度解析と形状の最適化が行われており、元のデザインの魅力が損なわれてしまうことも珍しくありません。
                     V.S.Program は、形状のアイデア発想初期段階から構造強度保証を伴う形状を創出しデザインに応用するためのツールです。</p>
                   <video src="<%= @s3+"movie-vsprogram-02-small.mov"%>" autoplay muted playsinline loop class="modal-top-image"></video>
-                  <%= image_tag @s3+"vsprogram-02.jpeg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"vsprogram-01.jpeg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-02.jpeg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-01.jpeg", class: 'modal-top-image' %>
                   <p>構造体の節の数、そして側面と上面のシルエットを指定することによりV.S.Programは構造体を自動生成します。
                   デザイナーはコントローラーGUIを通して構造体をインタラクティブに編集し、意図通りの形状へと調節することができます。</p>
-                  <%= image_tag @s3+"vsprogram-03.jpeg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"vsprogram-04.jpeg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"vsprogram-05.jpeg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-03.jpeg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-04.jpeg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-05.jpeg", class: 'modal-top-image' %>
                   <p>V.S.Programによって創出される構造体はトラス構造をベースとしているため一定以上の構造強度を担保することができます。
                   本ケースでは４輪サンドバギーのデザインへの応用をテーマとしたデザインスタディーを行いました。
                   また、成人男性1人＋エンジン相当の荷重を車軸４点で支えるために必要な構造強度を充分に満たすことをFEM解析により証明しました。</p>
-                  <%= image_tag @s3+"vsprogram-07.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"vsprogram-08.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"vsprogram-09.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"vsprogram-06.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-07.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-08.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-09.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-06.jpg", class: 'modal-top-image' %>
                   <p>3Dプリンターを使用し1/8スケールのモデルを製作。千葉大学工学部デザイン学科卒業制作展「意匠展」にて展示しました。</p>
-                  <%= image_tag @s3+"vsprogram-11.png", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"vsprogram-12.png", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-11.png", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"vsprogram-12.png", class: 'modal-top-image' %>
                 </div>
                 <p class="modal-sub-title">
                   Programing | Glass Hopper / Processing<br>
@@ -69,7 +69,7 @@
 
 <!--NISSAN SYLPHY-->
   <input type="checkbox" id="modal02" class="modalCheck">
-  <div class="wrapper scrollify work-container">
+  <div class="wrapper sclfy work-container">
       <div class="btn">
         <label for="modal02">
           <%= image_tag @s3+"eye-catch-silphy.jpg", class: 'work-eye-catch' %>
@@ -84,7 +84,7 @@
           <div class="modalBg"><label for="modal02" class="closeModal"></label></div>
           <div class="modalCon">
               <div class="modalInner">
-                <%= image_tag @s3+"sylphy-01.jpg", class: 'modal-top-image' %>
+                <%= lazy_image_tag @s3+"sylphy-01.jpg", class: 'modal-top-image' %>
                 <h1 class="modalTtl">NISSAN SYLPHY</h1>
                 <p class="modal-sub-title">Production Car<br>
                 Interior Color Material Finish Design</p>
@@ -95,21 +95,21 @@
                     スポーティーとラグジュアリーの両立を目指し、プレミアムスポーツカーの内装にもよく見られる「明るいタンカラーと
                     黒のハイコントラストな配色」を採用。近似色相であるオレンジメタリックのエクステリアカラーとのコンビネーションではスポーティーさがより際立ちます。
                   </p>
-                  <%= image_tag @s3+"sylphy-02.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"sylphy-03.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"sylphy-02.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"sylphy-03.jpg", class: 'modal-top-image' %>
                   <p>
                     本革のシートには二重のダイヤモンドがグラデーションで変化していくキルティングを施し、ダイナミックなプレミアム感の表現と快適性を両立させました。
                     シート背面をブラックアウトさせることでシートをより薄く、スポーティーに見せています。
                     そして、ブラックのストライプをアクセントに使用することでスポーティーさをさらに強調しています。
                   </p>
-                  <%= image_tag @s3+"sylphy-04.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"sylphy-05.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"sylphy-04.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"sylphy-05.jpg", class: 'modal-top-image' %>
                   <p>
                     ステアリングやシフトノブなどの操作系パーツはブラックで統一し、マット調のクロームと組み合わせることで機能部品の精度感を強調。
                     カーボン調のパターンをカップホルダーやウィンドウスイッチまわりに使用し、ディテールでもスポーティーさと充実したラグジュアリーを表現しました。
                   </p>
-                  <%= image_tag @s3+"sylphy-06.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"sylphy-07.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"sylphy-06.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"sylphy-07.jpg", class: 'modal-top-image' %>
                 </div>
                 <div class="btn">
                   <label for="modal02">× Close</label>
@@ -121,7 +121,7 @@
 
 <!--COMMIT-san-->
   <input type="checkbox" id="modal03" class="modalCheck">
-  <div class="wrapper scrollify work-container">
+  <div class="wrapper sclfy work-container">
       <div class="btn">
         <label for="modal03">
           <%= image_tag @s3+"eye-catch-commit-san.jpg", class: 'work-eye-catch' %>
@@ -136,7 +136,7 @@
           <div class="modalBg"><label for="modal03" class="closeModal"></label></div>
           <div class="modalCon">
               <div class="modalInner">
-                <%= image_tag @s3+"commit-san-07.jpg", class: 'modal-top-image' %>
+                <%= lazy_image_tag @s3+"commit-san-07.jpg", class: 'modal-top-image' %>
                 <h1 class="modalTtl">COMMIT-san</h1>
                 <p class="modal-sub-title">Web Application<br>
                  <a href="https://commit-san.herokuapp.com" target="_blank">https://commit-san.herokuapp.com</a>
@@ -149,8 +149,8 @@
                     現在運用中。ユーザー数は約８０人。
                   </p>
                 </div>
-                  <%= image_tag @s3+"commit-san-01.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"commit-san-04.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"commit-san-01.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"commit-san-04.jpg", class: 'modal-top-image' %>
                 <div class="modalText">
                   <p>
                     目標達成をモチベートするためにスポーツアプリを彷彿とさせるUIを目指しました。
@@ -159,8 +159,8 @@
                     成功や失敗といったステータスを直感で認識できるような設計にしました。
                   </p>
                 </div>  
-                  <%= image_tag @s3+"commit-san-02.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"commit-san-05.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"commit-san-02.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"commit-san-05.jpg", class: 'modal-top-image' %>
                 <div class="modalText">
                   <p>
                     上の画像はプロダクト企画時のリーンキャンバスやユーザーストーリーのマインドマップです。
@@ -170,7 +170,7 @@
                     ユーザーが必要最低限の手数で利用することができるUX設計を行ないました。
                   </p>
                 </div>
-                  <%= image_tag @s3+"commit-san-06.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"commit-san-06.jpg", class: 'modal-top-image' %>
                 <p class="modal-sub-title">
                   Programing | Ruby on Rails / HTML / CSS / Java Script<br>
                   Design | Photoshop / Illustrator / Figma
@@ -185,7 +185,7 @@
 
 <!--NISSAN PATROL-->
   <input type="checkbox" id="modal04" class="modalCheck">
-  <div class="wrapper scrollify work-container">
+  <div class="wrapper sclfy work-container">
       <div class="btn">
         <label for="modal04">
           <%= image_tag @s3+"eye-catch-patrol.jpg", class: 'work-eye-catch' %>
@@ -200,7 +200,7 @@
           <div class="modalBg"><label for="modal04" class="closeModal"></label></div>
           <div class="modalCon">
               <div class="modalInner">
-                <%= image_tag @s3+"patrol-01.jpg", class: 'modal-top-image' %>
+                <%= lazy_image_tag @s3+"patrol-01.jpg", class: 'modal-top-image' %>
                 <h1 class="modalTtl">NISSAN PATROL</h1>
                 <p class="modal-sub-title">Production Car
                 <br>Interior Color Material Finish Design</p>
@@ -210,8 +210,8 @@
                     そしてターゲットユーザーは王族たち。華々しい超大都会を優雅に移動しながらも、ときには砂漠を縦横無尽に走り回る。
                     その究極の２面性「最上級のリッチプレミアムとダイナミック」を表現することがインテリアコーディネーションの課題でした。
                   </p>
-                  <%= image_tag @s3+"patrol-07.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"patrol-03.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"patrol-07.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"patrol-03.jpg", class: 'modal-top-image' %>
                   <p>
                     ダイナミックなプレミアムを表現するために、NISSAN GT-Rのプレミアム内装でも採用したレディッシュブラウンとブラックの２トーンで配色。
                     インストパネル側にブラック、シートとドア側にレディッシュブラウンを配置することで「ドアを開けて乗り込む際にはリッチな空間」
@@ -219,15 +219,15 @@
                     グラデーションするキルティングをソフト本革シートの上端と下端の面積が一番大きい部分に施し、最上級のリッチプレミアムを表現しました。
                   </p>
 
-                  <%= image_tag @s3+"patrol-02.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"patrol-05.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"patrol-02.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"patrol-05.jpg", class: 'modal-top-image' %>
                   <p>
                     希少樹種の杢目をモチーフにしたフルグロスのフィニッシャーとクロームのコンビネーションを
                     ステアリング、インストパネル、コンソール、ドアの操作系部品の周囲にふんだんに使用することで
                     充実感をプラスしています。また、縫製は全てダブルステッチにすることでタフさと仕立ての良さを訴求しています。
                   </p>
-                  <%= image_tag @s3+"patrol-06.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"patrol-08.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"patrol-06.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"patrol-08.jpg", class: 'modal-top-image' %>
                 </div>
                 <div class="btn">
                   <label for="modal04">× Close</label>
@@ -239,7 +239,7 @@
 
 <!--4D flower-->
   <input type="checkbox" id="modal05" class="modalCheck">
-  <div class="wrapper scrollify work-container">
+  <div class="wrapper sclfy work-container">
       <div class="btn">
         <label for="modal05">
           <%= image_tag @s3+"eye-catch-4dflower.jpg", class: 'work-eye-catch' %>
@@ -262,22 +262,22 @@
                 <br>C&T Meeting 2019 (CAR STYLING x Too)
                 <p class="modal-sub-title">Prduct Design / 3D Modeling / Graphic Design</p>
                 <div class="modalText">
-                  <%= image_tag @s3+"4dflower-01.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-01.jpg", class: 'modal-top-image' %>
                   <p>
                     ４Dプリント技術（3Dプリント＋形状変化）と１kgの重さ分の3Dプリント素材を使用して、
                     人の手で作られた命のはかなさを表現した。左は「昨日」中央が「現在」右は「明日」の
                     花の姿を表している。ハロゲンランプの熱により暖められた中央の花が「蕾→開花→枯れる」と
                     その姿を変化させ、一度きりの命を全うしていく。
                   </p>
-                  <%= image_tag @s3+"4dflower-02.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-03.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-04.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-08.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-09.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-07.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-10.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-11.jpg", class: 'modal-top-image' %>
-                  <%= image_tag @s3+"4dflower-12.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-02.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-03.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-04.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-08.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-09.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-07.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-10.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-11.jpg", class: 'modal-top-image' %>
+                  <%= lazy_image_tag @s3+"4dflower-12.jpg", class: 'modal-top-image' %>
                 </div>
                 <p class="modal-sub-title">
                   Team | Hanaoka Daisuke (NISSAN) / Taoka Sai (KEIO SFC)<br>
@@ -293,7 +293,7 @@
   </div>
 <!--</div>-->
 
-<div class="skills-wrapper scrollify" id="3">
+<div class="skills-wrapper sclfy" id="3">
   <div class="skill-container">
     <div class="skill-text-container">
       <h3>Graphic Design</h3>
@@ -339,7 +339,7 @@
 </div>
 
 
-<div class="services-wrapper scrollify" id="4">
+<div class="services-wrapper sclfy" id="4">
   <div class="service-container">
     <div class="service-text-container">
       <h3>Product Creation</h3>
@@ -375,7 +375,7 @@
   </div>
 </div>
 
-<div class="contact-wrapper  scrollify" id="5">
+<div class="contact-wrapper  sclfy" id="5">
   <!--<div class="skill-container">-->
   <!--  <div class="skill-text-container">-->
   <!--    <h3>E-mail</h3>-->
@@ -423,8 +423,8 @@
 
 
 <script>
-  $.scrollify({section:".scrollify"});
-
+  $.scrollify({section:".sclfy"});
+  
   $(function(){
     $('a[href^="#"]').click(function(){
       $('body').toggleClass('open');
@@ -492,7 +492,7 @@
           $.scrollify.destroy();
       } else {
           $('body').css('overflow','auto');
-          $.scrollify({section:".scrollify"});
+          $.scrollify({section:".sclfy"});
       }
   });
 // モーダルウィンドウ試作中 END

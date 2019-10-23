@@ -10,9 +10,11 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-scrollify@1/jquery.scrollify.min.js"></script>
     <%= favicon_link_tag('favicon.ico') %>  
     <%= favicon_link_tag('apple-touch-icon-180x180.png', {:rel => 'apple-touch-icon', :sizes => '180x180', :type => 'image/png'}) %>    
+    <script src="https://cdn.jsdelivr.net/layzr.js/2.0.2/layzr.min.js"></script>
   </head>
 
   <body style="font-family: 'M PLUS 1p', sans-serif;background: #e9e9e9">
@@ -52,5 +54,17 @@
       </nav>
     </div>
     <%= yield %>
+    <script>
+      $(function() {
+        $('img.lazy').lazyload({
+            event: 'sporty'
+        });
+        $(window).on('load', function() {
+            var timeout = setTimeout(function() {
+                $('img.lazy').trigger('sporty');
+            }, 5000);
+        });
+      });
+    </script>
   </body>
 </html>

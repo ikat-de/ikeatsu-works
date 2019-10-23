@@ -26,5 +26,17 @@ module ApplicationHelper
         image: image_url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-twitter-card.jpg")
 	  },
     }
-  end 
+  end
+
+  def lazy_image_tag(source, options={})
+    options['data-original'] = asset_path(source)
+    if options[:class].blank?
+      options[:class] = 'lazy'
+    else
+      options[:class] = "lazy #{options[:class]}"
+    end
+  
+    image_tag('https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/loader.gif', options)
+  end  
+  
 end
