@@ -14,59 +14,59 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 body {
-    line-height:1;
+    line-height: 1;
 }
 
 article,aside,details,figcaption,figure,
 footer,header,hgroup,menu,nav,section {
-    display:block;
+    display: block;
 }
 
 nav ul {
-    list-style:none;
+    list-style: none;
 }
 
 blockquote, q {
-    quotes:none;
+    quotes: none;
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-    content:'';
-    content:none;
+    content: '';
+    content: none;
 }
 
 a {
-    margin:0;
-    padding:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
 }
 
 /* change colours to suit your needs */
 ins {
-    background-color:#ff9;
-    color:#000;
-    text-decoration:none;
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
 }
 
 /* change colours to suit your needs */
 mark {
-    background-color:#ff9;
-    color:#000;
-    font-style:italic;
-    font-weight:bold;
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
 }
 
 del {
@@ -74,29 +74,197 @@ del {
 }
 
 abbr[title], dfn[title] {
-    border-bottom:1px dotted;
-    cursor:help;
+    border-bottom: 1px dotted;
+    cursor: help;
 }
 
 table {
-    border-collapse:collapse;
-    border-spacing:0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* change border colour to suit your needs */
 hr {
-    display:block;
-    height:1px;
-    border:0;  
-    border-top:1px solid #cccccc;
-    margin:1em 0;
-    padding:0;
+    display: block;
+    height: 1px;
+    border: 0;  
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 input, select {
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
+
+// モーダルウィンドウ試作中 START
+.modalCheck {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.btn {
+  text-align: center;
+  margin: 2em 0 4em;
+}
+
+.modalWrap, .modalBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  z-index: 2000;
+}
+
+.modalWrap {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s cubic-bezier(1, 0, 0, 1);
+  transition: 0.3s cubic-bezier(1, 0, 0, 1);
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  will-change: opacity;
+}
+
+.modalBg {
+  cursor: pointer;
+  opacity: 0.7;
+  background-color: #000;
+  z-index: 1900;
+}
+.modalBg label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+.modalCon {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  right: 0;
+  width: 92%;
+  max-width: 640px;
+  height: 86%;
+  margin: auto;
+  z-index: 1950;
+}
+
+.modalInner {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  height: 100%;
+  cursor: default;
+  background-color: #e9e9e9;
+  color: #4b4b4b;
+}
+
+.modalTtl {
+  padding: 1em 0.5em 0.5em;
+  font-size: 2em;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.modal-sub-title {
+  padding: 1em 0.5em 2em;
+  font-size: 0.8em;
+  line-height: 2em;
+  text-align: center;
+}
+
+.modalText {
+  margin: 1em 2em 1em 2em;
+  text-align: justify;
+}
+.modalText p {
+  margin-bottom: 5em;
+  line-height: 2em;
+  font-size: 0.8em;
+}
+
+.modal-top-image {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 2em;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modalCloseBtn label {
+  display: inline-block;
+  padding: 0.5em;
+  color: #333;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+.modalCheck:not(:checked) ~ .wrapper > *:not(.modalWrap) {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+.modalCheck:not(:checked) ~ .wrapper .modalWrap {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modalCheck:checked ~ .wrapper > *:not(.modalWrap) {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+}
+
+#modal00:checked ~ .wrapper #modal00Con {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal01:checked ~ .wrapper #modal01Con {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal02:checked ~ .wrapper #modal02Con {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal03:checked ~ .wrapper #modal03Con {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal04:checked ~ .wrapper #modal04Con {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal05:checked ~ .wrapper #modal05Con {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal06:checked ~ .wrapper #modal06Con {
+  opacity: 1;
+  visibility: visible;
+}
+
+// モーダルウィンドウ試作中 END
 
 /*　for Smart Phone Vartical　*/
 @media screen and (max-width:559px) { 
@@ -1155,177 +1323,3 @@ input, select {
     font-size: 0.5em;
   }
 }
-
-
-// モーダルウィンドウ試作中 START
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
-
-.modalCheck {
-  display: none;
-}
-
-label {
-  cursor: pointer;
-}
-
-.btn {
-  text-align: center;
-  margin: 2em 0 4em;
-}
-
-.modalWrap, .modalBg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  z-index: 2000;
-}
-
-.modalWrap {
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.3s cubic-bezier(1, 0, 0, 1);
-  transition: 0.3s cubic-bezier(1, 0, 0, 1);
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  will-change: opacity;
-}
-
-.modalBg {
-  cursor: pointer;
-  opacity: 0.7;
-  background-color: #000;
-  z-index: 1900;
-}
-.modalBg label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: block;
-}
-
-.modalCon {
-  position: absolute;
-  top: 5%;
-  left: 0;
-  right: 0;
-  width: 92%;
-  max-width: 640px;
-  height: 86%;
-  margin: auto;
-  z-index: 1950;
-}
-
-.modalInner {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  position: relative;
-  height: 100%;
-  cursor: default;
-  background-color: #e9e9e9;
-  color: #4b4b4b;
-}
-
-.modalTtl {
-  padding: 1em 0.5em 0.5em;
-  font-size: 2em;
-  line-height: 1.3;
-  text-align: center;
-}
-
-.modal-sub-title {
-  padding: 1em 0.5em 2em;
-  font-size: 0.8em;
-  line-height: 2em;
-  text-align: center;
-}
-
-.modalText {
-  margin: 1em 2em 1em 2em;
-  text-align: justify;
-}
-.modalText p {
-  margin-bottom: 5em;
-  line-height: 2em;
-  font-size: 0.8em;
-}
-
-.modal-top-image {
-  width: 100%;
-  object-fit: contain;
-  margin-bottom: 2em;
-}
-
-.modalCloseBtn {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.modalCloseBtn label {
-  display: inline-block;
-  padding: 0.5em;
-  color: #333;
-  text-decoration: none;
-  font-size: 2em;
-}
-
-.modalCheck:not(:checked) ~ .wrapper > *:not(.modalWrap) {
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-}
-.modalCheck:not(:checked) ~ .wrapper .modalWrap {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.modalCheck:checked ~ .wrapper > *:not(.modalWrap) {
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
-}
-
-#modal00:checked ~ .wrapper #modal00Con {
-  opacity: 1;
-  visibility: visible;
-}
-
-#modal01:checked ~ .wrapper #modal01Con {
-  opacity: 1;
-  visibility: visible;
-}
-
-#modal02:checked ~ .wrapper #modal02Con {
-  opacity: 1;
-  visibility: visible;
-}
-
-#modal03:checked ~ .wrapper #modal03Con {
-  opacity: 1;
-  visibility: visible;
-}
-
-#modal04:checked ~ .wrapper #modal04Con {
-  opacity: 1;
-  visibility: visible;
-}
-
-#modal05:checked ~ .wrapper #modal05Con {
-  opacity: 1;
-  visibility: visible;
-}
-
-#modal06:checked ~ .wrapper #modal06Con {
-  opacity: 1;
-  visibility: visible;
-}
-
-// モーダルウィンドウ試作中 END
