@@ -488,6 +488,7 @@
 // モーダルウィンドウ試作中 START
   $('.modalCheck').on('change', function(){
       if($(this).is(':checked')){
+        $('img.lazy').trigger('sporty');
           $('body').css('overflow','hidden');
           $.scrollify.destroy();
       } else {

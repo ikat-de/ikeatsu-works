@@ -59,11 +59,6 @@
         $('img.lazy').lazyload({
             event: 'sporty'
         });
-        $(window).on('load', function() {
-            var timeout = setTimeout(function() {
-                $('img.lazy').trigger('sporty');
-            }, 5000);
-        });
       });
     </script>
   </body>
