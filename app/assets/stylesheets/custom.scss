@@ -98,7 +98,28 @@ input, select {
 }
 
 
-// モーダルウィンドウ試作中 START
+// ---------------------------------
+// フェードインアニメーション START
+// ---------------------------------
+
+.fade-in {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translate(0, 100px);
+}
+ 
+.fade-in.show {
+  opacity: 1;
+  transform: none;
+}
+
+// ---------------------------------
+// フェードインアニメーション END
+// ---------------------------------
+
+// ---------------------------------
+// モーダルウィンドウ START
+// ---------------------------------
 .modalCheck {
   display: none;
 }
@@ -263,8 +284,10 @@ label {
   opacity: 1;
   visibility: visible;
 }
+// ---------------------------------
+// モーダルウィンドウ END
+// ---------------------------------
 
-// モーダルウィンドウ試作中 END
 
 /*　for Smart Phone Vartical　*/
 @media screen and (max-width:559px) { 
@@ -883,7 +906,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
     background-image: url("https://ikeatsu-works.s3-ap-northeast-1.amazonaws.com/ikeatsu-works-bg-04-var.jpg");
@@ -893,7 +916,6 @@ label {
   }
   
   .work-eye-catch {
-    margin-top: 5vw;
     height: 70vw;
     width: 70vw;
     margin-left: auto;
@@ -902,7 +924,6 @@ label {
   }
   
   .work-text-container {
-    margin-top: 5vw;
     width: 90vw;
     text-align: center;
     display: flex;
@@ -911,7 +932,7 @@ label {
     justify-content: center;
     h2 {
       color: #4b4b4b;
-      font-size: 3em;
+      font-size: 2em;
       line-height: 1.5em;
       margin-bottom: 0;
     }
@@ -1173,12 +1194,11 @@ label {
   
   .work-text-container {
     width: 35vw;
-    height: 45vw;
+    height: 40vw;
     text-align: right;
     margin-right: 30px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: flex-end;
     h2 {
       color: #4b4b4b;
